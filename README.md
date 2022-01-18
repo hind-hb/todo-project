@@ -1,3 +1,2 @@
 # todo-project
-
-![todolist](https://user-images.githubusercontent.com/75991604/150018602-2571fed9-cbe4-494f-b737-0a80675b8ae0.png)
+![todolist](https://user-images.githubusercontent.com/75991604/149994766-79cf569b-718e-452d-bff9-b723224dfd1d.png)
