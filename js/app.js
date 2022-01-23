@@ -32,7 +32,7 @@ if (result == true) {
     if(gender='female ')
     {
 
-    x = "welcome miss "+name;
+    x = "welcome mis "+name;
     alert (x);}
 
     else if (gender='male')
