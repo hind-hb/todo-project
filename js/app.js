@@ -41,3 +41,52 @@ if (result == true) {
     alert (x);}
 }
 
+var ques = [array.question1,array.question2,array.question3];
+
+function question1(array) {
+    var array = [];
+    let person = prompt("are you happy");
+    if (person = "yes") {
+      document.write( array.push("yes"));
+ 
+    }
+     else if (person="no") {
+        document.write(array.push("no"));}
+    else 
+     {  document.write(array.push("invalid string "));}
+    
+ return document.write(array) ;
+
+  }
+
+  function question2(array) {
+    var array = new Array();
+    let person = prompt("Are you confident in yourself?");
+    if (person = "yes") {
+        document.write(array.push("yes"));
+ 
+     }
+      else if (person="no") {
+        document.write(array.push("no"));}
+     else 
+     {  document.write(array.push("invalid string "));}
+    return array ;
+
+  }
+
+  function question3(array) {
+    var array = new Array();
+     let person = prompt("did you cry today?");
+     if (person = "yes") {
+        document.write(array.push("yes"));
+ 
+     }
+     else if (person="no") {
+        document.write(array.push("no"));}
+     else 
+     {  document.write(array.push("invalid string "));}
+ return array ;
+
+  }
+  console.log(ques);
+
