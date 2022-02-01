@@ -1,92 +1,108 @@
-'user strict';
 
-var name= prompt('Enter your name here : ');
-console.log('my name is : ', name);
-
-var   gender = prompt('Enter your gender here :   ');
- 
-if (gender = 'female') {
-   
-console.log('my gender is  : ', gender);}
-else if (gender='male') {
-
-    console.log('my gender is  : ', gender);
+console.log("hi")
+var userName = prompt("please Enter your name:")
+console.log(userName)
+var gender = prompt("please Enter your gender:Male or Female")
+console.log(gender)
+var age=prompt("please Enter your age:")
+console.log(age)
+if (age <=0 ){
+    alert ("the age can't be less or equal to zero")
 }
-
-
-
-var age = prompt('Enter your age here : ');
-console.log('enter age  : ', age);
-value= age
-
-if (value <= 0) {
-    alert('Age must be greater than zero');
-  
-}
- 
-
-var result = confirm('are you Sure');
-console.log('Confirm result is : ', result);
-
-if (result == true) {
-    if(gender='female ')
-    {
-
-    x = "welcome mis "+name;
-    alert (x);}
-
-    else if (gender='male')
-    {
-        x = "welcome mr "+name;
-    alert (x);}
-}
-
-var ques = [array.question1,array.question2,array.question3];
-
-function question1(array) {
-    var array = [];
-    let person = prompt("are you happy");
-    if (person = "yes") {
-      document.write( array.push("yes"));
- 
+var genderConv = gender.toLowerCase();
+var genType ="";
+switch(genderConv){
+    case "female":{
+        genType= "Ms";
+        break;
     }
-     else if (person="no") {
-        document.write(array.push("no"));}
-    else 
-     {  document.write(array.push("invalid string "));}
-    
- return document.write(array) ;
+    case "male":
+        {genType = "Mr";
+        break;}
+    default:
+        {genType = "";}
 
+    }
+
+        
+
+console.log(genType);
+ var confbutton ="Do you want to skip welcoming message ?"
+
+  
+  if (confirm(confbutton) == true) {
+    text = "";
+  } else {
+    text = "You canceled!";
+    alert ("welcome "+ genType + " " +userName);
   }
+  
 
-  function question2(array) {
-    var array = new Array();
-    let person = prompt("Are you confident in yourself?");
-    if (person = "yes") {
-        document.write(array.push("yes"));
- 
-     }
-      else if (person="no") {
-        document.write(array.push("no"));}
-     else 
-     {  document.write(array.push("invalid string "));}
-    return array ;
 
+  const myArray= [];
+
+  function promToInput (arr){
+  var firstInput=prompt("are you at university? hint: yes, y, no ,n")
+   while (firstInput !=="no" || firstInput !=="yes" || firstInput !=="y" ||  firstInput !=="n")
+      if (firstInput == "")
+          firstInput = prompt("are you at university? hint: yes, y, no ,n");
+      
+      else break;
+  
+  
+  var secInput=prompt("are you at marriage? hint: yes, y, no ,n")
+  while (secInput !=="no" || secInput !=="yes" || secInput !=="y" ||  secInput !=="n")
+      if (secInput == "")
+            secInput = prompt("are you at university? hint: yes, y, no ,n");
+      else break;
+  
+  var thirdInput=prompt("Do you have childrens? hint: yes, y, no ,n")
+  while (thirdInput !=="no" || thirdInput !=="yes" || thirdInput !=="y" ||  thirdInput !=="n")
+      if (thirdInput == "")
+      thirdInput = prompt("are you at university? hint: yes, y, no ,n");
+      else break;
+  
+  console.log('first input is ');
+  console.log(firstInput)
+  console.log('second input is ');
+  console.log(secInput)
+  console.log('third input is ');
+  console.log(thirdInput);
+  
+  
+  arr.push(firstInput);
+  arr.push(secInput);
+  arr.push(thirdInput);
+  
+  console.log("your array in the right order :");
+  printArray(arr);
+  console.log("reversed");
+  revArray(arr);
   }
-
-  function question3(array) {
-    var array = new Array();
-     let person = prompt("did you cry today?");
-     if (person = "yes") {
-        document.write(array.push("yes"));
- 
-     }
-     else if (person="no") {
-        document.write(array.push("no"));}
-     else 
-     {  document.write(array.push("invalid string "));}
- return array ;
-
+  
+  
+  function printArray (arr)
+  {
+    for (var i=0; i<3; i++)
+  
+      console.log(arr[i]);
   }
-  console.log(ques);
-
+  
+  
+  function revArray (arr)
+  {
+    const newArray = [];
+    var j =2;
+    for (var i=0; i<3; i++){
+         newArray[j]= arr[i];
+         j--;
+    }
+          printArray(newArray)
+  }
+  
+  
+  
+  promToInput(myArray);
+  
+   
+  
